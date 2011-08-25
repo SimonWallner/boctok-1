@@ -1,3 +1,12 @@
-a loose collection of vintage style pd instruments and utils.
+
+                ____  ____  ________________  __ __     ___            
+  __________   / __ )/ __ \/ ____/_  __/ __ \/ //_/    <  /  __________
+ /____/____/  / __  / / / / /     / / / / / / ,< ______/ /  /____/____/
+/____/____/  / /_/ / /_/ / /___  / / / /_/ / /| /_____/ /  /____/____/ 
+            /_____/\____/\____/ /_/  \____/_/ |_|    /_/               
+                                                                       
+// boctok-1 //////////////////////////////////////////////////////////////////
+
+A loose collection of vintage style pd instruments and utils.
 
 licensed under the MIT license. See license.txt for more details.
