@@ -1,0 +1,53 @@
+#N canvas 246 47 592 447 10;
+#X text 104 26 --- Midi Trigger --- Takes a packed notein signal and
+makes it more usefull. Off note messages are only forwarded \, iff
+the note is the same as the current note. - in: packed note information
+- out: usefull note information;
+#X obj 25 36 inlet;
+#X obj 26 414 outlet;
+#X obj 25 97 unpack 0 0;
+#X obj 26 338 pack 0 0;
+#X obj 26 269 f;
+#X text 201 224 if current note == stored note AND vel == 0;
+#X obj 26 189 stripnote;
+#X obj 25 139 t f f;
+#X text 4 289 current note;
+#X msg 149 321 0;
+#X obj 122 282 t b b;
+#X text 105 89 now with support for a sustain pedal;
+#X obj 519 33 inlet;
+#X text 511 14 sustain;
+#X obj 518 70 loadbang;
+#X msg 518 93 0;
+#X obj 122 151 f;
+#X obj 370 119 t f f;
+#X obj 370 146 select 0;
+#X obj 370 171 t;
+#X obj 122 204 expr if ($f1 == $f2 && $f3 == 0 && $f4 == 0 \, 1 \,
+0);
+#X obj 122 252 select 1;
+#X connect 1 0 3 0;
+#X connect 3 0 8 0;
+#X connect 3 1 7 1;
+#X connect 3 1 21 2;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 5 0 21 1;
+#X connect 7 0 5 0;
+#X connect 7 0 17 0;
+#X connect 7 1 4 1;
+#X connect 8 0 21 0;
+#X connect 8 1 7 0;
+#X connect 10 0 4 1;
+#X connect 11 0 5 0;
+#X connect 11 1 10 0;
+#X connect 13 0 18 0;
+#X connect 15 0 16 0;
+#X connect 16 0 21 3;
+#X connect 17 0 21 0;
+#X connect 18 0 19 0;
+#X connect 18 1 21 3;
+#X connect 19 0 20 0;
+#X connect 20 0 17 0;
+#X connect 21 0 22 0;
+#X connect 22 0 11 0;

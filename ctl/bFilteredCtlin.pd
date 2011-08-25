@@ -1,0 +1,31 @@
+#N canvas 447 372 434 398 10;
+#X obj 124 111 ctlin;
+#X obj 271 115 inlet;
+#X obj 133 330 outlet;
+#X obj 203 299 f;
+#X obj 114 359 outlet;
+#X obj 203 329 outlet;
+#X obj 133 302 f;
+#X obj 114 256 t f b b;
+#X obj 63 216 select -1;
+#X obj 342 115 inlet;
+#X text 340 96 channel;
+#X text 270 96 number;
+#X obj 63 180 expr if($f2 == $f4 && $f3 == $f5 \, $f1 \, -1);
+#X text 43 30 --- Filtered ctlin --- This is a filtered version of
+ctlin \, just like with creation arguments but the channel can be changed
+at runtime. in: CONTROLLER NUMNER \, CHANNEL NUMBER;
+#X connect 0 0 12 0;
+#X connect 0 1 12 1;
+#X connect 0 2 12 2;
+#X connect 1 0 6 1;
+#X connect 1 0 12 3;
+#X connect 3 0 5 0;
+#X connect 6 0 2 0;
+#X connect 7 0 4 0;
+#X connect 7 1 6 0;
+#X connect 7 2 3 0;
+#X connect 8 1 7 0;
+#X connect 9 0 3 1;
+#X connect 9 0 12 4;
+#X connect 12 0 8 0;

@@ -1,0 +1,27 @@
+#N canvas 163 54 421 371 10;
+#X obj 46 96 inlet;
+#X obj 58 307 outlet;
+#X obj 136 307 outlet;
+#X obj 46 173 unpack 0 0;
+#X text 43 36 --- Midi splitter --- take a packed notein and route
+it to either the on or off channel. - in: packed notein - left out:
+notes with vel > 0 - right out: notes with vel == 0;
+#X text 47 333 on channel;
+#X text 134 335 off channel;
+#X obj 58 278 l;
+#X obj 136 278 l;
+#X obj 46 135 t l l;
+#X obj 136 202 moses 1;
+#X obj 58 249 t b;
+#X obj 136 247 t b;
+#X connect 0 0 9 0;
+#X connect 3 1 10 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 9 0 3 0;
+#X connect 9 1 7 1;
+#X connect 9 1 8 1;
+#X connect 10 0 12 0;
+#X connect 10 1 11 0;
+#X connect 11 0 7 0;
+#X connect 12 0 8 0;

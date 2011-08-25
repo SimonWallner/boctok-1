@@ -1,0 +1,19 @@
+#N canvas 554 172 481 360 10;
+#X obj 150 177 vsl 15 80 0 127 0 0 w_dev_null_send w_dev_null_receive
+empty 0 -9 0 10 -228856 -1 -1 0 1;
+#X obj 150 150 bng 15 250 50 0 w_dev_null_send w_dev_null_receive empty
+17 7 0 10 -262144 -1 -262144;
+#X obj 150 298 outlet;
+#X msg 182 133 color 13;
+#X msg 183 110 color 0;
+#X obj 150 273 / 127;
+#X obj 183 165 bAssignedCtlin;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X connect 6 0 0 0;
+#X connect 6 0 4 0;
+#X connect 6 3 3 0;
+#X coords 0 -1 1 1 15 110 2 150 150;

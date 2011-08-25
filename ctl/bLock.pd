@@ -1,0 +1,19 @@
+#N canvas 710 245 450 300 10;
+#X obj 147 176 select 1;
+#X obj 101 121 cnv 15 60 16 empty w_ctl_wLock_canvas empty 20 12 0
+14 -260818 -262144 0;
+#X obj 147 120 tgl 18 0 w_dev_null_send w_dev_null_receive empty 17
+7 0 10 -262144 -1 -1 0 1;
+#X text 102 121 locked:;
+#X obj 241 38 loadbang;
+#X msg 241 108 \; b_ctl_wLock_canvas color 14;
+#X msg 242 150 \; b_ctl_wLock_canvas color 0;
+#X obj 147 214 s b_ctl_lock;
+#X obj 192 249 s b_ctl_unlock;
+#X connect 0 0 6 0;
+#X connect 0 0 7 0;
+#X connect 0 1 5 0;
+#X connect 0 1 8 0;
+#X connect 2 0 0 0;
+#X connect 4 0 5 0;
+#X coords 0 -1 1 1 65 18 2 100 120;

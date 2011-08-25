@@ -1,0 +1,94 @@
+#N canvas 131 24 529 694 10;
+#X floatatom 45 383 5 0 0 0 - - -;
+#X floatatom 88 383 5 0 0 0 - - -;
+#X floatatom 132 383 5 0 0 0 - - -;
+#X floatatom 45 322 5 0 0 0 - - -;
+#X floatatom 44 486 5 0 0 0 - - -;
+#X floatatom 84 486 5 0 0 0 - - -;
+#X floatatom 125 486 5 0 0 0 - - -;
+#X floatatom 44 425 5 0 0 0 - - -;
+#X floatatom 125 425 5 0 0 0 - - -;
+#X obj 266 313 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 347 313 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 266 377 5 0 0 0 - - -;
+#X floatatom 306 377 5 0 0 0 - - -;
+#X floatatom 347 377 5 0 0 0 - - -;
+#X obj 397 377 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 44 591 5 0 0 0 - - -;
+#X floatatom 105 592 5 0 0 0 - - -;
+#X floatatom 167 592 5 0 0 0 - - -;
+#X floatatom 167 532 5 0 0 0 - - -;
+#X floatatom 44 532 5 0 0 0 - - -;
+#X obj 265 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 352 417 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 265 479 5 0 0 0 - - -;
+#X floatatom 305 479 5 0 0 0 - - -;
+#X floatatom 346 479 5 0 0 0 - - -;
+#X obj 396 479 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 266 527 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 389 527 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 266 591 5 0 0 0 - - -;
+#X floatatom 307 591 5 0 0 0 - - -;
+#X floatatom 348 591 5 0 0 0 - - -;
+#X obj 389 591 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 32 259 5 0 0 0 - - -;
+#X floatatom 64 159 5 0 0 0 - - -;
+#X obj 18 15 bLock;
+#X obj 30 64 bVFader;
+#X obj 294 67 bPad;
+#X text 98 15 bLock;
+#X text 62 101 bVFader;
+#X text 358 87 bPad (notes);
+#X obj 302 179 bButton;
+#X text 351 199 bButton (CC);
+#X obj 32 231 bHFader;
+#X text 158 231 bHFader;
+#X obj 45 353 bFilteredNotein;
+#X obj 266 343 bAssignedCtlin;
+#X obj 44 456 bFilteredCtlin;
+#X obj 265 445 bAssignedNotein;
+#X obj 44 561 bFilteredSingleNotein;
+#X obj 266 557 bAssignedSingleNotein;
+#X connect 3 0 44 0;
+#X connect 7 0 46 0;
+#X connect 8 0 46 1;
+#X connect 9 0 45 0;
+#X connect 10 0 45 1;
+#X connect 18 0 48 1;
+#X connect 19 0 48 0;
+#X connect 20 0 47 0;
+#X connect 21 0 47 1;
+#X connect 26 0 49 0;
+#X connect 27 0 49 1;
+#X connect 35 0 33 0;
+#X connect 42 0 32 0;
+#X connect 44 0 0 0;
+#X connect 44 1 1 0;
+#X connect 44 2 2 0;
+#X connect 45 0 11 0;
+#X connect 45 1 12 0;
+#X connect 45 2 13 0;
+#X connect 45 3 14 0;
+#X connect 46 0 4 0;
+#X connect 46 1 5 0;
+#X connect 46 2 6 0;
+#X connect 47 0 22 0;
+#X connect 47 1 23 0;
+#X connect 47 2 24 0;
+#X connect 47 3 25 0;
+#X connect 48 0 15 0;
+#X connect 48 1 16 0;
+#X connect 48 2 17 0;
+#X connect 49 0 28 0;
+#X connect 49 1 29 0;
+#X connect 49 2 30 0;
+#X connect 49 3 31 0;

@@ -1,0 +1,33 @@
+#N canvas 591 284 434 398 10;
+#X obj 265 116 inlet;
+#X obj 114 328 outlet;
+#X obj 250 298 f;
+#X obj 182 328 outlet;
+#X obj 250 328 outlet;
+#X obj 63 216 select -1;
+#X obj 63 120 notein;
+#X text 43 30 --- Filtered ctlin --- This is a filtered version of
+notein \, just like with creation arguments but the channel number
+can be changed at runtime. in:CHANNEL NUMBER;
+#X obj 182 298 f;
+#X obj 114 251 t f b b;
+#X obj 189 86 loadbang;
+#X msg 189 114 -1;
+#X obj 63 180 expr if($f2 == $f3 \, $f1 \, -1);
+#X text 108 347 number;
+#X text 177 348 velocity;
+#X text 250 351 channel;
+#X connect 0 0 2 1;
+#X connect 0 0 12 2;
+#X connect 2 0 4 0;
+#X connect 5 1 9 0;
+#X connect 6 0 12 0;
+#X connect 6 1 8 1;
+#X connect 6 2 12 1;
+#X connect 8 0 3 0;
+#X connect 9 0 1 0;
+#X connect 9 1 8 0;
+#X connect 9 2 2 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 2;
+#X connect 12 0 5 0;
