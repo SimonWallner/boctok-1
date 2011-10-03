@@ -1,0 +1,21 @@
+#N canvas 119 22 535 260 10;
+#X obj 26 94 inlet;
+#X obj 377 120 inlet;
+#X obj 26 219 outlet~;
+#X obj 26 122 phasor~;
+#X obj 26 191 expr~ $v1 * 2 - 1;
+#X obj 26 150 expr~ if($v1 < $f2 \, $v1/$f2 \, ($v1 * -1/(1-$f2)) +
+(1 / (1 - $f2)));
+#X text 25 19 --- Triangle~ --- generate a triagle wave with a variable
+mid-point q.;
+#X text 22 72 frequency;
+#X text 375 99 mid-point location q;
+#X obj 425 119 loadbang;
+#X msg 425 144 0.5;
+#X connect 0 0 3 0;
+#X connect 1 0 5 1;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 9 0 10 0;
+#X connect 10 0 5 1;
