@@ -1,0 +1,15 @@
+#N canvas 0 22 450 300 10;
+#X obj 85 35 inlet~;
+#X obj 288 29 inlet;
+#X text 328 32 delay ms;
+#X obj 85 227 outlet~;
+#X obj 136 161 delread~ \$0-dline;
+#X obj 106 70 delwrite~ \$0-dline 1000;
+#X obj 272 120 pack 0 50;
+#X obj 287 153 line;
+#X connect 0 0 3 0;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 4 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;

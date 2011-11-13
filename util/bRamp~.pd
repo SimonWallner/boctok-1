@@ -1,0 +1,19 @@
+#N canvas 0 22 400 253 10;
+#X text 34 28 --- util::Ramp --- Map an input signal in [0 \, 1] to
+a output signal of [i \, j] \, where i and j are input params.;
+#X obj 131 89 inlet;
+#X obj 217 89 inlet;
+#X msg 140 134 0;
+#X obj 271 117 loadbang;
+#X msg 227 134 1;
+#X obj 46 89 inlet~;
+#X obj 46 177 expr~ ($f3 - $f2) * $v1 + $f2;
+#X obj 46 207 outlet~;
+#X connect 1 0 7 1;
+#X connect 2 0 7 2;
+#X connect 3 0 7 1;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 2;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
