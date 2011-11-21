@@ -47,6 +47,9 @@
 #X text 691 11 file name;
 #X text 136 25 volume;
 #X obj 79 607 *~ 1;
+#X obj 894 291 openpanel;
+#X obj 867 402 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 4 0;
 #X connect 2 0 9 1;
 #X connect 2 0 18 0;
@@ -91,4 +94,6 @@
 #X connect 35 0 36 0;
 #X connect 36 0 21 0;
 #X connect 41 0 1 0;
+#X connect 42 0 32 0;
+#X connect 43 0 42 0;
 #X coords 0 -1 1 1 286 170 2 600 400;
